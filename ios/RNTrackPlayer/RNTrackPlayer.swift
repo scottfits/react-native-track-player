@@ -138,11 +138,7 @@ public class RNTrackPlayer: RCTEventEmitter {
     
     @objc(setupPlayer:resolver:rejecter:)
     public func setupPlayer(config: [String: Any], resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
-        if hasInitialized {
-            resolve(NSNull())
-            return
-        }
-        
+
         setupInterruptionHandling();
 
         // configure if player waits to play
@@ -150,7 +146,7 @@ public class RNTrackPlayer: RCTEventEmitter {
         player.automaticallyWaitsToMinimizeStalling = autoWait
         
         // configure audio session - category, options & mode
-        var sessionCategory: AVAudioSession.Category = .playback
+        var sessionCategory: AVAudioSession.Category = .playAndRecord
         var sessionCategoryOptions: AVAudioSession.CategoryOptions = []
         var sessionCategoryMode: AVAudioSession.Mode = .default
 
