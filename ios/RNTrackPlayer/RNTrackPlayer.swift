@@ -147,7 +147,7 @@ public class RNTrackPlayer: RCTEventEmitter {
         
         // configure audio session - category, options & mode
         var sessionCategory: AVAudioSession.Category = .playAndRecord
-        var sessionCategoryOptions: AVAudioSession.CategoryOptions = [.mixWithOthers]
+        var sessionCategoryOptions: AVAudioSession.CategoryOptions = [.mixWithOthers, .defaultToSpeaker]
         var sessionCategoryMode: AVAudioSession.Mode = .default
 
         if
