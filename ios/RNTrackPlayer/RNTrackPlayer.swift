@@ -146,7 +146,7 @@ public class RNTrackPlayer: RCTEventEmitter {
         player.automaticallyWaitsToMinimizeStalling = autoWait
         
         // configure audio session - category, options & mode
-        var sessionCategory: AVAudioSession.Category = .record
+        var sessionCategory: AVAudioSession.Category = .playback
         var sessionCategoryOptions: AVAudioSession.CategoryOptions = []
         var sessionCategoryMode: AVAudioSession.Mode = .default
 
